@@ -1,4 +1,3 @@
-
 CREATE DATABASE IF NOT EXISTS CrimeManagement;
 USE CrimeManagement;
 
@@ -13,7 +12,7 @@ CREATE TABLE PoliceStation (
 CREATE TABLE Officer (
     OfficerID INT PRIMARY KEY AUTO_INCREMENT,
     Name VARCHAR(100),
-    Rank VARCHAR(50),
+    OfficerRank VARCHAR(50),
     StationID INT,
     FOREIGN KEY (StationID) REFERENCES PoliceStation(StationID)
 );
@@ -70,11 +69,11 @@ INSERT INTO PoliceStation (Name, Location) VALUES ('Park Street PS', 'Kolkata');
 INSERT INTO PoliceStation (Name, Location) VALUES ('Charminar PS', 'Hyderabad');
 
 -- Officers
-INSERT INTO Officer (Name, Rank, StationID) VALUES ('Rajesh Kumar', 'Inspector', 1);
-INSERT INTO Officer (Name, Rank, StationID) VALUES ('Anita Sharma', 'Sub-Inspector', 2);
-INSERT INTO Officer (Name, Rank, StationID) VALUES ('Vikram Reddy', 'Constable', 3);
-INSERT INTO Officer (Name, Rank, StationID) VALUES ('Manpreet Singh', 'Inspector', 4);
-INSERT INTO Officer (Name, Rank, StationID) VALUES ('Nandita Joshi', 'Sub-Inspector', 5);
+INSERT INTO Officer (Name, OfficerRank, StationID) VALUES ('Rajesh Kumar', 'Inspector', 1);
+INSERT INTO Officer (Name, OfficerRank, StationID) VALUES ('Anita Sharma', 'Sub-Inspector', 2);
+INSERT INTO Officer (Name, OfficerRank, StationID) VALUES ('Vikram Reddy', 'Constable', 3);
+INSERT INTO Officer (Name, OfficerRank, StationID) VALUES ('Manpreet Singh', 'Inspector', 4);
+INSERT INTO Officer (Name, OfficerRank, StationID) VALUES ('Nandita Joshi', 'Sub-Inspector', 5);
 
 -- Victims
 INSERT INTO Victim (Name, Age, Address) VALUES ('Sunita Joshi', 34, 'Delhi');
